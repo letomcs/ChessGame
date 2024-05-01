@@ -17,10 +17,8 @@ abstract public class AbstractGamePiece
 	private String myAbbreviation;
 	private String myName;
 
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	abstract protected boolean isSquareRestricted(GameSquare step);
 	
-	// The student should complete this constructor by initializing the member
 	// variables with the provided data.
 	public AbstractGamePiece(String name, String abbreviation, int playerType)
 	{
@@ -31,38 +29,32 @@ abstract public class AbstractGamePiece
 		
 	}
 
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public int getPlayerType() 
 	{
 		return myPlayerType;
 	}
 	
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public void setPosition(int row, int col)
 	{
 		myRow = row;
 		myCol = col;
 	}
 	
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public int getRow() 
 	{ 
 		return myRow; 
 	}
 	
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public int getCol() 
 	{ 
 		return myCol; 
 	}
 
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public String getAbbreviation()
 	{
 		return myAbbreviation;
 	}
 	
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public String toString()
 	{
 	   if (myPlayerType == PLAYER_BLACK)
@@ -71,7 +63,6 @@ abstract public class AbstractGamePiece
 	       return "White " + myName + " at (" + myRow + "," + myCol + ")";
 	}
 
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public boolean canMoveToLocation(List<GameSquare> path)
 	{
 		// first, if it's an empty path, this move is not valid, so return false
@@ -95,8 +86,6 @@ abstract public class AbstractGamePiece
 		return true;
 	}
 	
-
-	// STUDENT SHOULD ADD AND IMPLEMENT THIS METHOD
 	public boolean isCaptured(GameBoard gameBoard)
 	{
 		// declare some local variables to hold two possible adjacent pieces
